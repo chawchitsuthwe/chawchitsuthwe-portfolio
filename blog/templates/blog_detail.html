@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+  <div class="blog-detail-area">
+    <div class="container box-1">
+      <div class="section">
+        <div class="row center">
+          <h3 class="header col s12">{{ post.title }}</h3>
+        </div>
+        <div class="row center">
+          <img src="{% static 'category.png' %}" width="12px" height="12px">
+          {% for category in post.categories.all %}
+          <span>{{ category.name }}.</span>
+          {% endfor %}
+          <img src="{% static 'calendar.png' %}" width="12px" height="12px">
+          <span>{{ post.created_on }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:10px;">
+    <div class="row">
+      <div class="col s12">
+        <p class="center">{{ post.body|linebreaks}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="gallery">
+      {% for gallery in gallerys %}
+      <img src="{{ gallery.image.url }}" class="card-g materialboxed">
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row center">
+      <h3>Leave a comment</h3>
+      <form action="/blog/{{ post.pk }}" method="post">
+        {% csrf_token %}
+        <div class="input-field row">
+        {{ form.author }}
+        </div>
+        <div class="input-field row">
+        {{ form.body }}
+        </div>
+        <button type="submit" name="button" class="waves-effect waves-light btn custom-blue">Submit</button>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <h3 class="center">Comments</h3>
+      {% for comment in comments %}
+        <div class="row col l12">
+          <div class="card-panel">
+              <span style="font-weight: bold;">{{ comment.author }}</span><br>
+              <span>{{comment.created_on.date }}</span>
+              <p>{{ comment.body }}</p>
+          </div>
+        </div>
+      {% endfor %}
+  </div>
+{% endblock %}

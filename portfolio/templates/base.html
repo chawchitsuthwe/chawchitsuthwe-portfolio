@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Chaw Chit Su Thwe</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body>
+  <nav class="ultramarine no-shadows" role="navigation">
+    <div class="nav-wrapper">
+      <a id="logo-container" href="{% url 'home' %}" class="brand-logo">ChawChitSuThwe</a>
+      <ul class="right hide-on-med-and-down">
+        <li class="custom-indigo">
+          <a href="{% url 'projects' %}" onMouseOver="this.style.color='#30415D'" onMouseOut="this.style.color='white'">Projects</a></li>
+        <li class="custom-blue">
+          <a href="{% url 'blog' %}" onMouseOver="this.style.color='#8eaebd'" onMouseOut="this.style.color='white'">Blog</a>
+        </li>
+        <li class="crimson">
+          <a href="{% url 'about' %}" onMouseOver="this.style.color='#b65e3d'" onMouseOut="this.style.color='white'">About</a>
+        </li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li class="custom-indigo">
+          <a href="{% url 'projects' %}" onMouseOver="this.style.color='#30415D'" onMouseOut="this.style.color='white'">Projects</a></li>
+        <li class="custom-blue">
+          <a href="{% url 'blog' %}" onMouseOver="this.style.color='#8eaebd'" onMouseOut="this.style.color='white'">Blog</a>
+        </li>
+        <li class="crimson">
+          <a href="{% url 'about' %}" onMouseOver="this.style.color='#b65e3d'" onMouseOut="this.style.color='white'">About</a>
+        </li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon-white">menu</i></a>
+    </div>
+  </nav>
+
+  {% block page_content %}{% endblock %}
+
+
+  <a class="btn-floating btn-large waves-effect waves-light ultramarine" id="scroll-back-btn"><i class="material-icons">arrow_upward</i></a>
+
+  <footer class="custom-indigo">
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row" style="margin-top: 0px; margin-bottom: 0px;">
+          <div class="col l12 s12" style="margin-top: 0px; margin-bottom: 0px;">
+            <ul style="list-style:none;" class="center">
+              <li style="text-align:left; display: inline-block;">
+                <a href="https://www.instagram.com/chawchitsuthwe/">
+                  <p style="color:white">Instagram</p>
+                </a>
+              </li>
+              <li style="text-align:left; display: inline-block;">
+                <p>|</p>
+              </li>
+              <li style="text-align:left; display: inline-block;">
+                <a href="#">
+                  <p style="color:white">LinkedIn</p>
+                </a>
+              </li>
+              <li style="text-align:left; display: inline-block;">
+                <p>|</p>
+              </li>
+              <li style="text-align:left; display: inline-block;">
+                <a href="mailto:chawchitsuthwe3699@gmail.com" class="btn white custom-indigo-text">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.materialboxed').materialbox();
+    });
+
+    var btn = $('#scroll-back-btn');
+    $(window).scroll(function() {
+      if ($(window).scrollTop() > 300) {
+        btn.addClass('show');
+      } else {
+        btn.removeClass('show');
+      }
+    });
+
+    btn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, '300');
+    });
+
+  </script>
+
+  </body>
+</html>

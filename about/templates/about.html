@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<div id="index-banner" class="parallax-container valign-wrapper">
+  <div class="section no-pad-bot">
+    <div class="container">
+      <br><br>
+      <div class="row center">
+        <h1 class="header col s12 light">ABOUT ME</h1>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <div class="parallax wrap-crimson">
+    <img src="{% static 'background3.jpg' %}" alt="about-bg">
+  </div>
+</div>
+<div class="white">
+  <div class="section container">
+    <div class="row">
+      <div class="col s12 m12 l6" style="padding-top: 15px;">
+        <h3>My name is Chaw Chit Su Thwe.</h3>
+        <p class="left-align light">
+          I'm a student majoring in Computer Engineering and information Technology at Yangon Technlogical
+          University. I have completed a handful of projects and I'm still working my way up to be able to
+          work as a professinal in this industry. <br>
+          I'm a Myanmar based full-stack developer specialized in frontend and backend developement for web apps.
+          Check out the projects I have worked on and my blog.
+        </p><br>
+        <div class="row">
+          <a href="https://www.instagram.com/chawchitsuthwe/" class="social-icon"><img src="{% static 'instagram.png' %}"></a>
+          <a href="#" class="social-icon"><img src="{% static 'linkedin.png' %}"></a>
+          <a href="mailto:chawchitsuthwe3699@gmail.com" class="social-icon"><img src="{% static 'gmail.png' %}"></a>
+        </div><br>
+        <a href="{% static 'ChawChitSuThwe_CV.pdf' %}" id="download-button" class="btn-large waves-effect waves-light white crimson-text" download>Get my CV (pdf)</a>
+      </div>
+      <div class="col s12 m12 l6 center" style="margin-top: 30px;">
+        <img class="responsive-img materialboxed" src="{% static 'home-bg.JPG' %}">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="project-area">
+  <div class="container box-1">
+    <div class="section">
+      <div class="row center">
+        <h3 class="header col s12">SKILLS</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section">
+    <div class="row white-text">
+      <div class="col s12 m6 l3 ultramarine">
+        <div class="icon-block center">
+          <img src="{% static 'frontend.png' %}" width="60px" height="60px">
+          <h5 class="center">Front-end</h5>
+
+          <p class="light">
+            <span class="black-text">Languages</span>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+              <li>&nbsp;</li>
+            </ul>
+            <span class="black-text">Dev Tools</span>
+            <ul>
+              <li>Bootstrap</li>
+              <li>Materialize</li>
+              <li>GitHub</li>
+              <li>Sublime Text</li>
+              <li>jQuery</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+
+        <div class="col s12 m6 l3 custom-indigo">
+          <div class="icon-block center">
+            <img src="{% static 'backend.png' %}" width="60px" height="60px">
+            <h5 class="center">Back-end</h5>
+
+            <p class="light">
+              <span class="black-text">Languages</span>
+              <ul>
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>&nbsp;</li>
+              </ul>
+              <span class="black-text">Dev Tools</span>
+              <ul>
+                <li>Atom</li>
+                <li>Django</li>
+                <li>Apache</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3 custom-blue">
+          <div class="icon-block center">
+            <img src="{% static 'database.png' %}" width="60px" height="60px">
+            <h5 class="center">Databases</h5>
+
+            <p class="light">
+              <span class="black-text">I have worked with</span>
+              <ul>
+                <li>MySQL</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>&nbsp;</li>
+              </ul>
+
+              <span class="black-text">Tools</span>
+              <ul>
+                <li>phpMyAdmin</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3 crimson">
+          <div class="icon-block center">
+            <img src="{% static 'project.png' %}" width="60px" height="60px">
+            <h5 class="center">PrjManagement</h5>
+
+            <p class="light">
+              <span class="black-text">I have skills in</span>
+              <ul>
+                <li>Communication</li>
+                <li>Scheduling</li>
+                <li>Leadership</li>
+                <li>Teamwork</li>
+              </ul>
+              <span class="black-text">Tools</span>
+              <ul>
+                <li>Trello</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+                <li>&nbsp;</li>
+            </p>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m6">
+      <h4 class="center">Languages I speak</h4>
+      <div class="icon-block center">
+        <div class="col s12 m4">
+          <img src="{% static 'myanmar.png' %}" width="60px" height="60px">
+          <p>Burmese<br>Native</p>
+        </div>
+        <div class="col s12 m4">
+          <img src="{% static 'english.png' %}" width="60px" height="60px">
+          <p>English<br>Proficient</p>
+        </div>
+        <div class="col s12 m4">
+          <img src="{% static 'japan.png' %}" width="60px" height="60px">
+          <p>Japanaese<br>Daily Conversation</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m6 center">
+      <h4 class="center">Education</h4>
+      <div class="icon-block center">
+        <div class="col s12">
+          <img src="{% static 'ytu.png' %}" width="60px">
+          <p>
+            Bachelor of Engineering in <span style="font-weight:bold; font-size:16px;">Computer Engineering and Information Technology</span>
+            <br> Expectd to graduate in 2022
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

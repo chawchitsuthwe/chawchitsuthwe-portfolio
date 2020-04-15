@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+  <div class="project-detail-area">
+    <div class="container box-1">
+      <div class="section">
+        <div class="row center">
+          <h3 class="header col s12">{{ project.title }}</h3>
+        </div>
+        <div class="row center">
+          <img src="{% static 'calendar.png' %}" width="12px" height="12px">
+          <span>{{ project.project_year }}</span>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="padding-top:10px;">
+    <p class="center">{{ project.description|linebreaks}}</p>
+  </div>
+
+  <div class="container" style="margin-bottom: 15px;">
+    <div id="gallery">
+      {% for gallery in gallerys %}
+      <img src="{{ gallery.image.url }}" class="card-g img-responsive materialboxed">
+      {% endfor %}
+    </div>
+  </div>
+
+{% endblock %}

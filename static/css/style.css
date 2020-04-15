@@ -1,0 +1,301 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+body{
+  font-family: 'Montserrat';
+}
+
+nav ul a,
+nav .brand-logo {
+  color: white;
+}
+
+.header{
+  font-weight: bold;
+}
+
+p {
+  line-height: 2rem;
+  font-size: 15px;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 500px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 30px 5px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+#gallery{
+  -webkit-column-count:4;
+  -moz-column-count:4;
+  column-count:4;
+
+  -webkit-column-gap:10px;
+  -moz-column-gap:10px;
+  column-gap:10px;
+}
+@media (max-width:1200px){
+  #gallery{
+  -webkit-column-count:3;
+  -moz-column-count:3;
+  column-count:3;
+
+  -webkit-column-gap:10px;
+  -moz-column-gap:10px;
+  column-gap:10px;
+}
+}
+@media (max-width:800px){
+  #gallery{
+  -webkit-column-count:2;
+  -moz-column-count:2;
+  column-count:2;
+
+  -webkit-column-gap:10px;
+  -moz-column-gap:10px;
+  column-gap:10px;
+}
+}
+@media (max-width:600px){
+  #gallery{
+  -webkit-column-count:1;
+  -moz-column-count:1;
+  column-count:1;
+}
+}
+.card-g{
+  width:100%;
+  height:auto;
+  margin: 3% auto;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.icon-white{
+  color: white;
+}
+.no-shadows {
+    box-shadow: none!important;
+}
+
+.ultramarine {
+  background-color: #031424 !important;
+}
+
+.ultramarine-text {
+  color: #031424 !important;
+}
+
+.custom-indigo {
+  background-color: #30415D !important;
+}
+
+.custom-indigo-text {
+  color: #30415D !important;
+}
+
+.custom-blue {
+  background-color: #8eaebd !important;
+}
+
+.custom-blue-text {
+  color: #8eaebd !important;
+}
+
+.crimson {
+  background-color: #b65e3d !important;
+}
+
+.crimson-text {
+  color: #b65e3d !important;
+}
+
+.parallax{
+  position:relative;
+}
+
+.wrap-ultramarine:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgb(3, 20, 36,0.8);
+  z-index:999;
+}
+
+.wrap-indigo:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgb(48, 65, 93,0.7);
+  z-index:999;
+}
+
+.wrap-blue:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgb(142, 174, 189, 0.7);
+  z-index:999;
+}
+
+.wrap-crimson:before {
+  content:"";
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background: rgb(182, 94, 61, 0.7);
+  z-index:999;
+}
+
+.parallax img {
+    display:block;
+}
+
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-icon img{
+  width: 35px;
+  height: auto;
+}
+
+.social-icon:hover{
+    opacity: .5;
+}
+
+.project-area{
+  position: relative;
+  z-index: 1;
+  background-color:  #b65e3d;
+  margin-bottom: 65px;
+  padding: 0 10px;
+}
+
+.blog-area{
+  position: relative;
+  z-index: 1;
+  background-color:  white;
+  margin-bottom: 65px;
+  padding: 0 10px;
+}
+
+.project-detail-area{
+  position: relative;
+  z-index: 1;
+  background-color:  #30415D;
+  margin-bottom: 65px;
+  padding: 0 10px;
+}
+
+.blog-detail-area{
+  position: relative;
+  z-index: 1;
+  background-color:  #8eaebd;
+  margin-bottom: 65px;
+  padding: 0 10px;
+}
+
+.project-area .box-1, .project-detail-area .box-1, .blog-detail-area .box-1{
+    min-height: 50px;
+    border-radius: 0px;
+    position: relative;
+    bottom: -65px;
+    background: #fff;
+    padding: 0px 30px 0px 30px;
+    box-shadow: 0px 20px 80px 0px rgba(153, 153, 153, 0.3);
+}
+
+.blog-area .box-1{
+    min-height: 50px;
+    border-radius: 0px;
+    position: relative;
+    bottom: -110px;
+    background: #fff;
+    padding: 0px 30px 0px 30px;
+    box-shadow: 0px 20px 20px 0px rgba(153, 153, 153, 0.3);
+}
+
+
+.card:hover{
+  -webkit-box-shadow:5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card-image img{
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.card:hover .card-image img{
+  transform: scale(2);
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 10px solid #8eaebd;
+    box-shadow: 0 1px 0 0 #8eaebd;
+  }
+
+#scroll-back-btn{
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  visibility: hidden;
+}
+
+#scroll-back-btn.show {
+  opacity: 1;
+  visibility: visible;
+}
